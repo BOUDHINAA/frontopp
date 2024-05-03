@@ -88,7 +88,7 @@ const Status = ({ initialPosts }) => {
                 sx={{ width: 80, height: 80 }}
               />
               <Typography variant="h4" component="div">
-                <a href='axios.get '> {post.username}</a>
+                 {post.username}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 {new Date(post.createdAt).toUTCString()}

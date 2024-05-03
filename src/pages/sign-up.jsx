@@ -273,7 +273,7 @@ if (!data.phoneNumber) {
   <div className="flex justif
   y-center items-center h-screen">
     <div className="w-full max-w-screen-lg">
-      <div className="text-center ml-60  mt-60">
+      <div className="text-center  mt-60">
         <Typography variant="h2" className="font-bold text-red-800 mt-80  ">Join Us!</Typography>
         <div className={`text-center ${showMessage ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}`}>
           <Typography variant="paragraph" color="blue-gray" className="text-sm font-normal transition-opacity duration-500 ease-in">
@@ -282,7 +282,7 @@ if (!data.phoneNumber) {
         </div>
       </div>
 
-      <Card className=" rounded-lg p-1  bg-opacity-90 mt-10 ml-60 mb-10">
+      <Card className=" rounded-lg p-1 bg-gray-200 bg-opacity-90 mt-10 mb-10">
         <form onSubmit={registerJobseeker} className="mt-1 mb-0.5 mx-auto w-full max-w-screen-md flex flex-wrap justify-between form-container">
           {/* Form fields */}
           
@@ -550,7 +550,22 @@ if (!data.phoneNumber) {
 
           </div>{/* Facebook */}
           <div className="w-full mb-4">
-             
+              <div className="relative center mx-auto">
+                <input
+                  type="file"
+                  id="fileInput"
+                  className="hidden"
+                  onChange={handleImageChange}
+                />
+                <label
+                  htmlFor="fileInput"
+                  className={`w-full border rounded-md p-3 text-sm text-white cursor-pointer hover:bg-black focus:outline-none focus:border-black ${
+                    data.image ? 'bg-red-800 border-red-800' : 'bg-black border-black'
+                  }`}
+                >
+                  {data.image ? 'Image Uploaded' : 'Upload Company Logo'}
+                </label>
+              </div>
             </div>
 
 

@@ -10,9 +10,11 @@ const Comment = ({ comment, userName, time, handleDeleteComment }) => {
       <Grid container>
         <Grid item xs={12} md={1}>
           <Avatar
-            src="/img/team-5.png"
+            src={`http://localhost:3000/user/profileCompany_image/${localStorage.getItem(
+              'pId',
+            )}`}
             alt="Profile picture"
-            variant="square"
+            variant="round"
             sx={{ width: 80, height: 80 }}
           />
         </Grid>
@@ -22,7 +24,7 @@ const Comment = ({ comment, userName, time, handleDeleteComment }) => {
             <Typography variant="body2">{time}</Typography>
           </Grid>
           <Grid item>
-            <Typography sx={{wordBreak:'break-all'}}>{comment}</Typography>
+            <Typography sx={{ wordBreak: 'break-all' }}>{comment}</Typography>
           </Grid>
         </Grid>
       </Grid>

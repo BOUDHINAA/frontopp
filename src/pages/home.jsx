@@ -26,7 +26,7 @@ import QRCode from 'qrcode.react';
 
 import { FaTimes } from 'react-icons/fa';
 import ShowDetailSignUP from "./showdetailsSignup";
-
+import { SignIn } from ".";
 
 
 

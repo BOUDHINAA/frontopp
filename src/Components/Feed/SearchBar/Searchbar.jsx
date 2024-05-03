@@ -57,7 +57,7 @@ function SearchBar() {
       </div>
       <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
         {searchResults.map((profile) => (
-          <li key={profile._id} className="pb-3 sm:pb-4">
+          <li key={[profile._id, profile.lastname]} className="pb-3 sm:pb-4">
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
               <div className="flex-shrink-0">
                 <img
@@ -72,7 +72,11 @@ function SearchBar() {
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
                   <Link
-                    to={profile._id ? `/profile-details/${profile._id}` : '#'}
+                    to={
+                      profile.lastname
+                        ? `/profile/${profile._id}`
+                        : `/Profilecompany/${profile._id}`
+                    }
                     className="text-red-500 hover:underline"
                   >
                     {profile.name} {profile.lastname}

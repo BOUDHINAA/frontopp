@@ -33,7 +33,7 @@ export function RedirectSignUp() {
 
     <div className='w-full py-[10rem] px-4  justify-content-center ml-70'>
 
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 ml-80'>
+      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 ml-40'>
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 ml-40 mt-10'>
               <img className='  w-20 mx-auto mt-[-3rem] bg-white' src={jobseeker} alt="/" />
               <h2 className=' Lato text-[#2b2b2b] text-2xl  text-center py-8'>JOB SEEKER</h2>

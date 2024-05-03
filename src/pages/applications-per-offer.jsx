@@ -107,7 +107,7 @@ const ApplicationsPerOffer = () => {
     <>
       <Navbar />
       <div className="container mx-auto pt-2 py-8">
-        <div className="flex justify-center items-center mb-8 mt-20">
+        <div className="flex justify-center items-center mb-8 mt-4">
           <input
             type="search"
             className="block w-80 px-4 py-2 text-sm text-gray-900 placeholder-gray-500 bg-gray-100 border border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-black focus:border-gray-500"
@@ -117,15 +117,16 @@ const ApplicationsPerOffer = () => {
           />
         </div>
         {applications.length === 0 ? ( // Check if there are no applications
-        <p className="text-center text-gray-700 text-lg mt-20">There is no application for your job offer yet.</p>
+        <p className="text-center text-gray-700 text-lg">There is no application for your job offer yet.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 mt-20 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg-grid-cols-3 gap-8">
           {applications.map((application) => (
             <div key={application._id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-4">
                 <p className="text-center mb-2">Email: {application.email}</p>
-                <p className="text-center mb-2">motivation: {application.motivation}</p>
-
+                {application.job_seeker && (
+                  <p className="text-center mb-2">Name: {application.job_seeker.name}</p>
+                )}
                 <div className="flex justify-center mb-2">
                   {application.accepted ? (
                     <div className="flex items-center text-green-700">

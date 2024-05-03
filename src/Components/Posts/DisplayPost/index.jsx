@@ -52,9 +52,11 @@ const DisplayPost = ({ post, profile, handledeletePost }) => {
           <Grid container item alignItems={'center'} mb={'1rem'}>
             <Grid item xs={1}>
               <Avatar
-                src="/img/team-5.png"
+                src={`http://localhost:3000/user/profileCompany_image/${localStorage.getItem(
+                  'pId',
+                )}`}
                 alt="Profile picture"
-                variant="square"
+                variant="round"
                 sx={{ width: 80, height: 80 }}
               />
             </Grid>
