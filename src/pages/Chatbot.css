@@ -1,0 +1,135 @@
+.header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    margin: 0;
+    color: #000000; /* Dark color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 2em; /* Increases the font size */
+  }
+  
+  .description {
+    margin-top: 10px;
+    color: #d41b1b;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .conversation {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+  }
+  .chatbot-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ff0000;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    background-color: #db3333;
+    color: white;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .typing-indicator {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .icon-spin {
+    animation: spin 2s linear infinite;
+  }
+  .message.assistant {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  .input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+  
+  .input-message {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-right: 10px;
+  }
+  
+  .send-btn {
+    background-color: #d42b2b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .send-btn:hover {
+    background-color: #010407;
+  }
+  .clear-btn {
+    padding: 10px 20px; /* Larger padding for a bigger button */
+    background-color: #000000; /* Bright red to make it noticeable */
+    color: white; /* White text for contrast */
+    border: none; /* No border for a clean look */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger font for readability */
+    font-weight: bold; /* Bold font to emphasize the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .clear-btn:hover {
+    background-color: #b13737; /* Darker red on hover */
+  }
+  
+  .clear-btn:active {
+    background-color: #b13737; /* Even darker red when the button is clicked */
+  }
+  
+  .clear-btn:disabled {
+    background-color: #b13737; /* Gray when disabled */
+    color: #666666; /* Lighter text when disabled */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  }
+  
